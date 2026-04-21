@@ -1,0 +1,48 @@
+#index-grid{
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 80vh;
+
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
+
+  gap: 0;
+  padding: 5vh 2vw;
+  box-sizing: border-box;
+}
+
+/* generic cell behavior */
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* corners */
+.corner {
+  width: clamp(100px, 15vw, 200px);
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3) drop-shadow(0 0 10px magenta);
+  }
+}
+
+/* sides fill remaining space */
+.side {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* optional: debug visibility */
+.side:hover {
+  background: rgba(255,255,200,0.05);
+}

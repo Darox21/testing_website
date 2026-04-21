@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/style.css">
+    <!-- Markdown Renderer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/10.0.0/marked.min.js"
+        integrity="sha512-EjCqglelq9tO9KdT2iRYtcj19Q8sSXblMy+5SBfogeh5TvLwmRh9dz5l1uEwNO40/cZInZsr3jti2JCNMZJsng=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Template loader for MD and HTML -->
+    <script src="js/templateloader.js"></script>
+
+        <!-- MathJax for LaTeX equations -->
+    <script>
+        window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            packages: {'[+]': ['ams']}  // Matrices package
+        },
+        svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+<div id="header" class="hidden"></div>
+
+<div id="index-grid"></div>
+<div id="main"></div>
+
+<div id="footer"></div>
+
+<!-- Loading the other scripts at the end to ensure the DOM is fully loaded -->
+<script src="js/index-grid.js"></script>
+<script src="js/effects.js"></script>
+<script src="js/main.js"></script>
+</body>

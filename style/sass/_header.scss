@@ -1,0 +1,53 @@
+@use 'colors' as colors;
+
+$header-height: 60px;
+
+#header {
+	// position: fixed;
+	width: 100%;
+	height: $header-height;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+	padding: 0px;
+	background-color: colors.$bg-footer;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+	ul {
+		padding: 0px;
+		overflow-x: auto;
+	}
+}
+
+// Logo and title
+.main-logo {
+	display: flex;
+	align-items: center;
+	margin-left: 5px;
+
+	h2 {
+		margin: 5px;
+		margin-left: 0;
+	}
+	img {
+		height: 40px;
+		margin: 5px;
+	}
+}
+
+// Navigation
+.nav-sections {
+	margin: 0px;
+	padding-right: 5px;
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	overflow-x: auto;
+
+	li {
+		display: inline-block;
+		margin: 0 11px;
+	}
+}

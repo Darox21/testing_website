@@ -1,0 +1,14 @@
+.scratch {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+
+    svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 1.2em;
+        pointer-events: none;
+    }
+}

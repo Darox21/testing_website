@@ -1,0 +1,19 @@
+.contact-icons {
+	list-style: none;
+
+	li {
+		display: inline-block;
+	}
+
+	img {
+		filter:
+			brightness(0%);
+		height: 25px;
+		margin: 5px;
+
+		// On hover
+		&:hover {
+			filter: brightness(0%)invert(50%);
+		}
+	}
+}

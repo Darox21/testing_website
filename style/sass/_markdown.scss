@@ -1,0 +1,86 @@
+
+@use 'colors' as colors;
+$markdown-width: 800px;
+
+.markdown-body {
+    margin: 0 auto;
+    max-width: $markdown-width;
+    padding: 30px;
+    transition: 0.5s;
+
+    p {
+        line-height: 1.4rem;
+    }
+
+    img {
+        // Centered
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        max-height: 400px;
+    }
+
+    h2, h3, h4 {
+        // Images inside headings can be bigger
+        img {
+            max-height: 100%;
+        }
+    }
+
+    h3 {
+        text-align: left;
+        margin: 0 20px;
+        margin-top: 40px;
+        padding-left: 20px;
+        // A line under the heading
+        border-bottom: 1px solid colors.$secondary;
+    }
+
+    li {
+        text-align: left;
+    }
+
+    // Bold text is highlighted instead
+    // strong {
+    //     // font-weight: inherit;
+    //     // color: colors.$accent;
+    // }
+
+    // Code blocks
+    pre {
+        background-color: colors.$bg-dark;
+        padding: 10px;
+        font-size: large;
+        margin: auto;
+        border-radius: 5px;
+        overflow-x: auto;
+        max-width: 80%;
+
+        code {
+            font-family: monospace;
+            text-align: left;
+        }
+    }
+
+    blockquote {
+        border-left: 5px solid colors.$bg-dark;
+        margin-left: 30px;
+        margin-right: 30px;
+        p {
+            padding: 0 10px;
+        }
+    }
+
+    iframe {
+        display: block;
+        max-width: 100%;
+        border: 3px solid rgba(colors.$secondary, 0.4);
+        border-radius: 5px;
+        
+        &:focus {
+            border: 3px solid rgba(colors.$accent, 1.0);
+        //     box-shadow: 0 0 0 3px rgba($accent-color, 0.25);
+        }
+    }
+}

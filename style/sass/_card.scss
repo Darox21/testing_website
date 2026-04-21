@@ -1,0 +1,24 @@
+@use 'colors' as colors;
+$card-color:blue;
+
+.card {
+    padding: 1rem;
+    border-radius: 5px;
+    border-color: colors.$text-muted;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.embeddable-buttondown-form {
+    max-width: 24rem;
+    line-height: 1.5rem;
+
+    a {
+        color: colors.$text-muted;
+        text-decoration: none;
+        font-size: small;
+    }
+    p {
+        text-align: center;
+    }
+}
